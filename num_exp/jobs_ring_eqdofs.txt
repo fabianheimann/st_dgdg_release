@@ -1,0 +1,4 @@
+# steep ring (delta = 0.03), alpha = 0, k = 4: CG with (almost) the same number of dofs as DG on level 4
+# (87 time steps, h = 0.9 * 4 / 87: 179655 vs. 181575 dofs per time slab), and with a 10x smaller / larger Ghost penalty
+6 9 env MKL_NUM_THREADS=6 OMP_NUM_THREADS=1 python conv_study.py -nthr 6 -g kite_ring0.03 -a 0 -s CGall -ks 4 -nsteps 87 -gamma 0.005 -line 1 -sol pardiso_metis
+6 9 env MKL_NUM_THREADS=6 OMP_NUM_THREADS=1 python conv_study.py -nthr 6 -g kite_ring0.03 -a 0 -s CGall -ks 4 -nsteps 87 -line 1 -sol pardiso_metis

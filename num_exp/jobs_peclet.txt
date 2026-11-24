@@ -1,0 +1,13 @@
+# Peclet sweep at fixed mesh: missing decades of alpha (1, 1e-2, 1e-4, 1e-6, 0 exist), levels 3 and 4
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 0.1 -s DG -ks 3 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 0.1 -s CGall -ks 3 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 0.001 -s DG -ks 3 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 0.001 -s CGall -ks 3 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 1e-05 -s DG -ks 3 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 1e-05 -s CGall -ks 3 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 0.1 -s DG -ks 2 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 0.1 -s CGall -ks 2 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 0.001 -s DG -ks 2 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 0.001 -s CGall -ks 2 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 1e-05 -s DG -ks 2 -i0 3 -nr 2 -sol pardiso_metis
+1 6 env MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 python conv_study.py -nthr 1 -g kite -a 1e-05 -s CGall -ks 2 -i0 3 -nr 2 -sol pardiso_metis

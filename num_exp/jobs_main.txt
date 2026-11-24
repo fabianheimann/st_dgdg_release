@@ -1,0 +1,42 @@
+# --- 5.1 convergence, alpha = 1, curved, DG and CG (expensive first)
+4 32 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s DG -ks 5 -i0 1 -nr 4
+4 12 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s DG -ks 3 -i0 1 -nr 5
+4 7 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s CG -ks 3 -i0 1 -nr 5
+4 6 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s DG -ks 1 -i0 1 -nr 7
+4 12 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s DG -ks 2 -i0 1 -nr 6
+4 7 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s CG -ks 2 -i0 1 -nr 6
+4 12 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s DG -ks 6 -i0 1 -nr 3
+4 10 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s DG -ks 4 -i0 1 -nr 4
+4 6 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s CG -ks 4 -i0 1 -nr 4
+# --- 3D moving sphere, k=2 (i0..2), k=3 (i0..1)
+6 24 env MKL_NUM_THREADS=6 OMP_NUM_THREADS=1 python conv_study.py -nthr 6 -g moving_sphere -a 1 -s DG -ks 2 -i0 0 -nr 3
+6 8 env MKL_NUM_THREADS=6 OMP_NUM_THREADS=1 python conv_study.py -nthr 6 -g moving_sphere -a 1 -s DG -ks 3 -i0 0 -nr 2
+6 24 env MKL_NUM_THREADS=6 OMP_NUM_THREADS=1 python conv_study.py -nthr 6 -g moving_sphere -a 0 -s DG -ks 2 -i0 0 -nr 3
+6 8 env MKL_NUM_THREADS=6 OMP_NUM_THREADS=1 python conv_study.py -nthr 6 -g moving_sphere -a 0 -s DG -ks 3 -i0 0 -nr 2
+# --- 5.2a alpha -> 0 sweep, k=2,3
+3 12 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0 -s DG -ks 3 -i0 1 -nr 5
+3 4 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0 -s DG -ks 2 -i0 1 -nr 5
+3 6 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0 -s CG -ks 3 -i0 1 -nr 5
+3 2 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0 -s CG -ks 2 -i0 1 -nr 5
+3 6 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0 -s CGall -ks 3 -i0 1 -nr 5
+3 2 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0 -s CGall -ks 2 -i0 1 -nr 5
+3 12 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 1e-06 -s DG -ks 3 -i0 1 -nr 5
+3 4 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 1e-06 -s DG -ks 2 -i0 1 -nr 5
+3 6 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 1e-06 -s CG -ks 3 -i0 1 -nr 5
+3 2 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 1e-06 -s CG -ks 2 -i0 1 -nr 5
+3 6 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 1e-06 -s CGall -ks 3 -i0 1 -nr 5
+3 2 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 1e-06 -s CGall -ks 2 -i0 1 -nr 5
+3 12 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.0001 -s DG -ks 3 -i0 1 -nr 5
+3 4 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.0001 -s DG -ks 2 -i0 1 -nr 5
+3 6 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.0001 -s CG -ks 3 -i0 1 -nr 5
+3 2 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.0001 -s CG -ks 2 -i0 1 -nr 5
+3 6 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.0001 -s CGall -ks 3 -i0 1 -nr 5
+3 2 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.0001 -s CGall -ks 2 -i0 1 -nr 5
+3 12 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.01 -s DG -ks 3 -i0 1 -nr 5
+3 4 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.01 -s DG -ks 2 -i0 1 -nr 5
+3 6 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.01 -s CG -ks 3 -i0 1 -nr 5
+3 2 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.01 -s CG -ks 2 -i0 1 -nr 5
+3 6 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.01 -s CGall -ks 3 -i0 1 -nr 5
+3 2 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 0.01 -s CGall -ks 2 -i0 1 -nr 5
+3 6 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 1 -s CGall -ks 3 -i0 1 -nr 5
+3 2 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite -a 1 -s CGall -ks 2 -i0 1 -nr 5

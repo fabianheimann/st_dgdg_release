@@ -1,0 +1,3 @@
+# CGall (GP on all active facets) at alpha=1, replacing cut-only CG in the k=1..6 convergence figure
+4 6 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s CGall -ks 2 -i0 1 -nr 6
+4 6 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 1 -s CGall -ks 4 -i0 1 -nr 4

@@ -1,0 +1,16 @@
+# ring delta = 0.03, k = 4, level 4
+3 8 env MKL_NUM_THREADS=3 OMP_NUM_THREADS=1 python conv_study.py -nthr 3 -g kite_ring0.03 -a 0 -s DG -ks 4 -i0 4 -nr 1 -line 1 -sol pardiso_metis
+# Peclet sweep, CG with GP on cut facets only, levels 3 and 4 (missing alphas)
+2 8 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0 -s CG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 8 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 1e-06 -s CG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 8 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 1e-05 -s CG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 8 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.0001 -s CG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 8 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.001 -s CG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 8 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.01 -s CG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 8 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.1 -s CG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 6 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.1 -s CG -ks 3 -i0 3 -nr 2 -sol pardiso_metis
+2 6 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.001 -s CG -ks 3 -i0 3 -nr 2 -sol pardiso_metis
+2 6 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 1e-05 -s CG -ks 3 -i0 3 -nr 2 -sol pardiso_metis
+2 6 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.1 -s CG -ks 2 -i0 3 -nr 2 -sol pardiso_metis
+2 6 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.001 -s CG -ks 2 -i0 3 -nr 2 -sol pardiso_metis
+2 6 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 1e-05 -s CG -ks 2 -i0 3 -nr 2 -sol pardiso_metis

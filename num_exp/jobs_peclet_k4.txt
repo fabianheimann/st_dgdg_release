@@ -1,0 +1,19 @@
+# Peclet sweep at fixed mesh, k = 4 (alpha = 1 exists), levels 3 and 4
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0 -s DG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0 -s CGall -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 1e-06 -s DG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 1e-06 -s CGall -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 1e-05 -s DG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 1e-05 -s CGall -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.0001 -s DG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.0001 -s CGall -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.001 -s DG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.001 -s CGall -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.01 -s DG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.01 -s CGall -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.1 -s DG -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+2 10 env MKL_NUM_THREADS=2 OMP_NUM_THREADS=1 python conv_study.py -nthr 2 -g kite -a 0.1 -s CGall -ks 4 -i0 3 -nr 2 -sol pardiso_metis
+# alpha = 0 convergence, remaining orders for the second row of the convergence figure
+4 6 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 0 -s DG -ks 1 -i0 1 -nr 6
+4 12 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 0 -s DG -ks 6 -i0 1 -nr 3
+4 12 env MKL_NUM_THREADS=4 OMP_NUM_THREADS=1 python conv_study.py -nthr 4 -g kite -a 0 -s DG -ks 5 -i0 1 -nr 3
